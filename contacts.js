@@ -1,5 +1,5 @@
-const fs = require("fs").promises;
-const path = require("path");
+import { promises as fs } from "fs";
+import path from "path";
 
 const contactsPath = path.join(process.cwd(), "/db/contacts.json");
 
@@ -71,4 +71,4 @@ function addContact(name, email, phone) {
     });
 }
 
-module.exports = { listContacts, getContactById, removeContact, addContact };
+export { listContacts, getContactById, removeContact, addContact };
